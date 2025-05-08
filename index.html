@@ -83,15 +83,19 @@
         }
 
         .nav-logo img {
-            max-width: 120px; /* Base size for mobile */
+            max-width: 100px; /* Base size for mobile */
             height: auto; /* Maintain aspect ratio */
-            margin-left: 10px; /* Small margin from edge */
+            margin-left: 6px; /* Small margin from edge */
         }
-
-        /* Add responsive sizes for different screens */
+        @media (min-width: 600px) {
+            .nav-logo img {
+                max-width: 120px; /* Smaller than tablet but larger than phone */
+            }
+        }
         @media (min-width: 768px) {
             .nav-logo img {
                 max-width: 168px; /* Original size for larger screens */
+                margin-left: 10px; /* Small margin from edge */
             }
         }
 
@@ -191,7 +195,40 @@
             opacity: 0;
         }
 
-        /* Media Queries for Responsive Design */
+        /* Screen size Optimizations */
+
+        /* Mobile browsers */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem; /* Smaller font size for mobile */
+            }
+            
+            .hero {
+                padding: 0 1.5rem; /* Reduced padding on very small screens */
+            }
+            
+            .hero-desc {
+                font-size: 1rem; /* Smaller description text */
+            }
+
+            nav {
+                padding: 1.5rem 1rem; /* Less padding on very small screens */
+            }
+            
+            .nav-item {
+                font-size: 1.2rem; /* Smaller font size for menu items */
+            }
+        }
+
+        /* Medium-small screens */
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 2.8rem;
+                margin-bottom: 1.5rem; /* Less space below title */
+            }
+        }
+
+        /* Tablet-like screens */
         @media (max-width: 768px) {
             .hero {
                 padding: 0 2rem;
