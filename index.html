@@ -200,15 +200,19 @@
         /* Mobile browsers */
         @media (max-width: 480px) {
             .hero-title {
-                font-size: 1rem; /* Smaller font size for mobile */
                 margin-top: -2.2rem;
                 letter-spacing: -0.03em; /* New property */
                 word-spacing: -0.05em;   /* New property */
                 font-weight: 600;
+                padding: 0 1rem;
+            }
+
+            .hero-title span {
+                font-size: 2rem; /* Smaller font size for mobile */
             }
             
             .hero {
-                padding: 0 0.5rem; /* Reduced padding on very small screens */
+                padding: 0 1rem; /* Reduced padding on very small screens */
             }
             
             .hero-desc {
