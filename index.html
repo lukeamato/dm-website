@@ -440,40 +440,13 @@
             gsap.to('footer', {
                 scrollTrigger: {
                     trigger: 'footer',
-                    start: "top bottom-=100",
+                    start: "top bottom-=50",
                     toggleActions: "play none none none"
                 },
                 opacity: 1,
                 duration: 1,
                 ease: "power2.out"
             });
-        });
-
-        // Simplified ScrollTrigger implementation (since we're not loading the full plugin)
-        // In a real implementation, you would use the GSAP ScrollTrigger plugin
-        window.addEventListener('scroll', () => {
-            const scrollPos = window.scrollY;
-            const windowHeight = window.innerHeight;
-            
-            // Check gallery items
-            document.querySelectorAll('.gallery-item').forEach((item, index) => {
-                const rect = item.getBoundingClientRect();
-                if (rect.top < windowHeight - 100) {
-                    setTimeout(() => {
-                        item.style.opacity = 1;
-                        item.style.transform = 'translateY(0)';
-                        item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                    }, index * 100);
-                }
-            });
-            
-            // Check footer
-            const footer = document.querySelector('footer');
-            const footerRect = footer.getBoundingClientRect();
-            if (footerRect.top < windowHeight - 100) {
-                footer.style.opacity = 1;
-                footer.style.transition = 'opacity 1s ease';
-            }
         });
     </script>
 </body>
