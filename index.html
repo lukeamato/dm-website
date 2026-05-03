@@ -183,6 +183,12 @@
             background-position: center;
         }
 
+        .gallery-item[data-artist="Slow Degrade"] {
+            background-image: url('SD_Press.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
         .gallery-item[data-artist="Poolhouse"] {
             background-image: url('poolhouse.JPG');
             background-size: cover;
@@ -215,6 +221,13 @@
         footer {
             padding: 2rem clamp(2rem, 5%, 6rem);
             opacity: 0;
+        }
+
+        a.gallery-item {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
         }
 
         /* Screen size Optimizations */
@@ -331,6 +344,9 @@
         </div>
         <div class="gallery-item" data-artist="httpqx">
             <div class="artist-name">httpqx</div>
+        </div>
+        <div class="gallery-item" data-artist="Slow Degrade">
+            <div class="artist-name">Slow Degrade</div>
         </div>
         <div class="gallery-item" data-artist="Poolhouse">
             <div class="artist-name">Poolhouse</div>
